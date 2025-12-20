@@ -152,11 +152,11 @@ public class Runigram {
 		int numCols = image[0].length;
 
 		Color[][] scaled = new Color[height][width];
-		double rowScale = (double)(numRows / height);
-    	double colScale = (double)(numCols / width);
-		for(int i = 0; i < numRows; i++){
+		double rowScale = (double) numRows / height;
+		double colScale = (double) numCols / width;
+		for(int i = 0; i < height; i++){
 			int srcRow = Math.min((int)(i * rowScale), numRows - 1);
-			for(int j = 0; j < numCols; j++){
+			for(int j = 0; j < width; j++){
 				int srcCol = Math.min((int)(j * colScale), numCols - 1);
 				scaled[i][j] = (image[srcRow][srcCol]);
 			}
